@@ -28,7 +28,7 @@ body {
       block-size: 100%;
       top: 0;
 
-      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)),
+      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)),
         url(../src/source/image/iPadAir.png);
       background-position: 50%;
       background-size: cover;
