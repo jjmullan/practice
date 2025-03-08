@@ -1,0 +1,140 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.item__list {
+  display: grid;
+  row-gap: var(--text-spacing-xxl, 2rem);
+}
+
+.item {
+  inline-size: 100%;
+  block-size: 43.75rem;
+
+  /* .item_clickable 요소를 영역 전체로 덮기 위해 설정 */
+  position: relative;
+
+  .item__clickable {
+    /* 영역 전체를 덮고, 레이어를 앞으로 이동 */
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inline-size: 100%;
+      block-size: 100%;
+      top: 0;
+
+      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)),
+        url(../src/source/image/iPadAir.png);
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .item__txt {
+    block-size: 100%;
+
+    /* padding */
+    padding-block: var(--title-spacing-basic, 3rem);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: var(--text-spacing-xxl, 2rem);
+
+    /* font */
+    text-align: center;
+    vertical-align: center;
+  }
+
+  .item__top {
+    /* grid */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--text-spacing-s, 0.75rem);
+
+    .item__title {
+      font-size: var(--title-xs, 2.5rem);
+      font-weight: 700;
+
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .item__subtitleWrapper {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: var(--text-spacing-xxs, 0.25rem);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .item__subtitle {
+      font-size: var(--text-spacing-l, 1.5rem);
+    }
+
+    .item__tbc {
+      font-size: var(--text-spacing-basic, 1rem);
+      color: var(--gray, #9c9c9c);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .item__button {
+      margin-block-start: var(--text-spacing-xxs, 0.25rem);
+      z-index: 1;
+
+      display: flex;
+      gap: var(--text-spacing-basic, 1rem);
+    }
+
+    .fill,
+    .outline {
+      padding: var(--text-spacing-s, 0.75rem) var(--text-spacing-m, 1.25rem);
+      font-size: var(--text-spacing-basic, 1rem);
+      border-radius: 100px;
+    }
+
+    .fill.blue {
+      background-color: var(--blue-basic);
+      color: var(--white);
+    }
+
+    .outline.blue {
+      border: 1px solid currentColor;
+      color: var(--blue-basic);
+    }
+
+    .fill:hover {
+      background-color: var(--blue-hover);
+    }
+
+    .outline:hover {
+      background-color: var(--blue-hover);
+      border: 1px solid var(--blue-hover);
+      color: var(--white);
+    }
+  }
+
+  .item__middle,
+  .item__bottom {
+    font-size: var(--text-spacing-m, 1.25rem);
+    font-weight: 700;
+    z-index: 1;
+    pointer-events: none;
+
+    .item__commontxt {
+      display: inline;
+      background: -webkit-linear-gradient(0deg, blue, green);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

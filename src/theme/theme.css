@@ -1,0 +1,28 @@
+:root {
+  /* text */
+  --text-spacing-xxs: 0.25rem;
+  --text-spacing-xs: 0.5rem;
+  --text-spacing-s: 0.75rem;
+  --text-spacing-basic: 1rem;
+  --text-spacing-m: 1.25rem;
+  --text-spacing-l: 1.5rem;
+  --text-spacing-xl: 1.75rem;
+  --text-spacing-xxl: 2rem;
+
+  /* title */
+  --title-spacing-xxs: 2.25rem;
+  --title-spacing-xs: 2.5rem;
+  --title-spacing-s: 2.75rem;
+  --title-spacing-basic: 3rem;
+  --title-spacing-m: 3.25rem;
+  --title-spacing-l: 3.5rem;
+  --title-spacing-xl: 3.75rem;
+  --title-spacing-xxl: 4rem;
+
+  /* color */
+  --white: #ffffff;
+  --black: #1b1b1b;
+  --gray: #9c9c9c;
+  --blue-basic: #0071e3;
+  --blue-hover: #2997ff;
+}
